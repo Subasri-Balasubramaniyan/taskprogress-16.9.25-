@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Flexbox</title>
+    <style>
+         /* Style by using flexbox */
+        .menu{
+            display:flex;
+            margin-left: 30px;
+            justify-content: space-around;
+        }
+        img{
+            width: 300px;
+            height: 300px;
+            transition: transform 0.3s ease;
+            cursor: zoom-in;
+        }
+        img:hover{
+            transform: scale(1.2);
+        }
+        .menu1{
+            border: solid black 2px;
+            margin-left: 15px;
+            padding: 10px;
+            border-radius: 10px;
+        }
+        p{
+            text-align: center;
+            font-family: sans-serif;
+            font-weight: bold;
+        }
+        /* Style bu using CSS Grid layout */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* 2 equal columns */
+             gap: 10px; /* space between items */
+}
+
+        .item {
+            padding: 20px;
+            text-align: center;
+}
+        /* Give different colours for each row */
+        .item:nth-child(1),
+        .item:nth-child(4){
+            background-color: crimson;
+        }
+         .item:nth-child(2),
+        .item:nth-child(3){
+            background-color:palevioletred;
+        }
+    </style>
+</head>
+<body>
+    <!-- CSS Flexbox -->
+  <h3>CSS Flexbox</h3>
+  <div class="menu">
+    <div class="menu1">
+        <img src="https://th.bing.com/th/id/OIP.uhKx8E9C9RhzTmmnGfeWfAHaHa?w=189&h=189&c=7&r=0&o=7&dpr=1.5&pid=1.7&rm=3">
+        <p>Chicken biriyani</p>
+        <p>Rs 299</p>
+    </div>
+    <div class="menu1">
+        <img src="https://th.bing.com/th/id/OIP.q9sQ0X419YDV7svLzVZEBwHaD4?w=298&h=180&c=7&r=0&o=7&dpr=1.5&pid=1.7&rm=3">
+        <p>Prawn fry</p>
+        <p>Rs 399</p>
+    </div>
+    <div class="menu1">
+        <img src="https://th.bing.com/th/id/OIP.r1sx4evtofoHxR8B-GUGdwHaEK?w=308&h=180&c=7&r=0&o=7&dpr=1.5&pid=1.7&rm=3">
+        <p>Squid Fry</p>
+        <p>Rs 499</p>
+    </div>
+    <div class="menu1">
+        <img src="https://th.bing.com/th/id/OIP.62aYBCXRk1QO8cCNxBaQpgHaE7?w=300&h=200&c=7&r=0&o=7&dpr=1.5&pid=1.7&rm=3">
+        <p>Fish Fry</p>
+        <p>Rs 359</p>
+    </div>
+  </div>
+  <!-- CSS Grid layout -->
+    <h3>CSS Grid layout</h3>
+    <div class="grid-container">
+  <div class="item">1</div>
+  <div class="item">2</div>
+  <div class="item">3</div>
+  <div class="item">4</div>
+</div>
+
+</body>
+</html>

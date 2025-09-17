@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Graphics</title>
+</head>
+<body>
+    <!-- Canvas Element -->
+     <!-- For drawing rectangle -->
+     <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000;"></canvas><br><br>
+     <!-- For drawing straigth line -->
+     <canvas id="myCanvas1" width="200" height="100" style="border:1px solid #000;"></canvas><br><br>
+     <!-- For drawing circle -->
+      <canvas id="myCanvas2" width="200" height="100" style="border:1px solid #000;"></canvas><br><br>
+      <!-- For text -->
+        <canvas id="myCanvas3" width="200" height="100" style="border:1px solid #000;"></canvas><br><br>
+      <!-- For stroketext -->
+       <canvas id="myCanvas4" width="200" height="100" style="border:1px solid #000;"></canvas><br><br>
+       <!-- Linear Gradient -->
+         <canvas id="myCanvas5" width="200" height="100" style="border:1px solid #000;"></canvas><br><br>
+         <!-- Circular gradient -->
+          <canvas id="myCanvas6" width="200" height="100" style="border:1px solid #000;"></canvas><br><br>
+        
+
+
+<script>
+  var canvas = document.getElementById("myCanvas");
+  var ctx = canvas.getContext("2d");
+  ctx.fillStyle = "red";
+  ctx.fillRect(10, 10, 100, 50);
+//   to draw line
+var canvas1=document.getElementById("myCanvas1")
+var ctx=canvas1.getContext("2d");
+// moves to the point(0,0) without drawing anything
+ctx.moveTo(0, 0);  
+// It planned to draw straight line from the point (0,0) to the point(200,100) Note:not drawn it just planned
+ctx.lineTo(200, 100);
+// This command only draw the straight line
+ctx.stroke();
+// Draw circle
+var canvas2=document.getElementById("myCanvas2")
+var ctx=canvas2.getContext("2d")
+ctx.beginPath();
+// ctx.arc(x, y, radius, startAngle, endAngle);
+ctx.arc(95, 50, 40, 0, 2 * Math.PI);
+ctx.stroke();
+// for text
+var canvas3=document.getElementById("myCanvas3")
+var ctx=canvas3.getContext("2d")
+ctx.font=" 30px Arial"
+// 10=x 50=Y
+ctx.fillText("Subasri",10,50)
+// For stroketext
+var canvas4=document.getElementById("myCanvas4")
+var ctx=canvas4.getContext("2d")
+ctx.font=" 30px Arial"
+// 10=x 50=Y
+ctx.strokeText("Subasri",10,50)
+// Linear gradient
+ var canvas5 = document.getElementById("myCanvas5");
+  var ctx = canvas5.getContext("2d");
+//   it moves horizontally from the point(0,0)to(200,0) from left to right
+  var grd=ctx.createLinearGradient(0,0,200,0);
+  grd.addColorStop(0, "red");
+  grd.addColorStop(1, "white");
+// Fill with gradient
+ctx.fillStyle = grd;
+ctx.fillRect(10, 10, 150, 80);
+// Circular gradient
+var canvas6 = document.getElementById("myCanvas6");
+  var ctx = canvas6.getContext("2d");
+//   ctx.createRadialGradient(x0, y0, r0, x1, y1, r1);
+  var grd=ctx.createRadialGradient(75,50,5,90,60,100);
+  grd.addColorStop(0, "red");
+  grd.addColorStop(1, "white");
+// Fill with gradient
+ctx.fillStyle = grd;
+ctx.fillRect(10, 10, 150, 80);
+</script>
+
+</body>
+</html

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+</head>
+<body>
+    <!-- View date and time -->
+    <h1>Javascript within HTML</h1>
+    <button type="button" onclick="document.getElementById('demo').innerHTML=Date()">Click me to view date and time</button>
+    <p id="demo"></p>
+    <!-- Javascript change text -->
+     <p id="text" style="color: darkmagenta; padding: 10px; font-style: italic; font-weight: bold;">Hello</p>
+     <button id="btn" onclick='changetext()'>Click me to change the text</button>
+</body>
+<script>
+    function changetext(){
+        const para=document.getElementById('text')
+        if(para.textContent=='Hello'){
+            para.textContent='welcome to javascript';
+        }
+        else{
+            para.textContent='Hello';
+        }
+    }
+</script>
+</html>
